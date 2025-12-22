@@ -34,9 +34,6 @@ const Footer = () => {
           </div>
 
           {/* Copyright */}
-          <p className="font-mono text-sm text-muted-foreground">
-            Built with <span className="text-primary">♥</span> by Yehezkiel Rumapea
-          </p>
         </div>
       </div>
     </footer>
