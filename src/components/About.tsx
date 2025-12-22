@@ -3,23 +3,23 @@ import { Server, Cloud, GitBranch, Shield } from "lucide-react";
 const expertise = [
   {
     icon: Cloud,
-    title: "Cloud Architecture",
-    description: "Designing and implementing scalable cloud solutions on AWS, GCP, and Azure.",
+    title: "Cloud Fundamentals",
+    description: "Developing foundational knowledge in cloud architecture and deploying applications on AWS and GCP.",
   },
   {
     icon: GitBranch,
-    title: "CI/CD Pipelines",
-    description: "Building automated deployment pipelines with Jenkins, GitLab CI, and GitHub Actions.",
+    title: "CI/CD Implementation",
+    description: "Building automated workflows and deployment pipelines using GitHub Actions and GitLab CI for academic projects.",
   },
   {
     icon: Server,
-    title: "Container Orchestration",
-    description: "Managing containerized applications with Docker and Kubernetes at scale.",
+    title: "Containerization",
+    description: "Utilizing Docker to create consistent development environments and managing microservices.",
   },
   {
     icon: Shield,
-    title: "Security & Monitoring",
-    description: "Implementing DevSecOps practices and comprehensive monitoring solutions.",
+    title: "DevOps Mindset",
+    description: "Focused on bridging the gap between development and operations through automation and collaborative culture.",
   },
 ];
 
@@ -36,7 +36,7 @@ const About = () => {
               <span className="text-muted-foreground">01.</span> about_me
             </p>
             <h2 className="text-3xl md:text-4xl font-bold">
-              What I <span className="text-gradient">Bring</span> to the Table
+              Passionate about <span className="text-gradient">DevOps</span> & Infrastructure
             </h2>
           </div>
           
@@ -44,24 +44,23 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div>
               <p className="text-lg text-muted-foreground mb-6">
-                With over 5 years of experience in DevOps and Site Reliability Engineering, 
-                I specialize in building and maintaining robust infrastructure that scales. 
-                I'm passionate about automation, infrastructure as code, and creating 
-                developer-friendly workflows.
+                Hello! I am a final-year student with a deep passion for 
+                <strong> Cloud Computing</strong> and <strong>DevOps Engineering</strong>. 
+                Throughout my academic journey, I have focused on mastering how to build efficient, scalable infrastructure through automation.
               </p>
               <p className="text-lg text-muted-foreground mb-6">
-                My journey started as a systems administrator, which gave me a deep 
-                understanding of both the development and operations sides. Today, I focus 
-                on bridging these worlds through modern DevOps practices.
+                I enjoy experimenting with emerging technologies and transforming manual processes into 
+                automated workflows. I am currently working on several personal projects and am eager to 
+                apply my skills to real-world challenges in a professional environment.
               </p>
               <div className="flex gap-4 font-mono text-sm">
                 <div className="px-3 py-1 rounded bg-secondary border border-border">
-                  <span className="text-muted-foreground">Experience:</span>{" "}
-                  <span className="text-primary">5+ years</span>
+                  <span className="text-muted-foreground">Status:</span>{" "}
+                  <span className="text-primary">Final Year Student</span>
                 </div>
                 <div className="px-3 py-1 rounded bg-secondary border border-border">
-                  <span className="text-muted-foreground">Projects:</span>{" "}
-                  <span className="text-primary">50+</span>
+                  <span className="text-muted-foreground">Open to:</span>{" "}
+                  <span className="text-primary">Internships / Junior Roles</span>
                 </div>
               </div>
             </div>
@@ -72,17 +71,17 @@ const About = () => {
                 <div className="w-3 h-3 rounded-full bg-destructive/80" />
                 <div className="w-3 h-3 rounded-full bg-terminal-yellow/80" />
                 <div className="w-3 h-3 rounded-full bg-primary/80" />
-                <span className="ml-2 font-mono text-sm text-muted-foreground">profile.yml</span>
+                <span className="ml-2 font-mono text-sm text-muted-foreground">student_profile.yml</span>
               </div>
               <pre className="p-4 font-mono text-sm overflow-x-auto">
                 <code>
                   <span className="text-terminal-cyan">name</span>: <span className="text-foreground">"Yehezkiel Rumapea"</span>{"\n"}
-                  <span className="text-terminal-cyan">role</span>: <span className="text-foreground">"DevOps Engineer"</span>{"\n"}
-                  <span className="text-terminal-cyan">available</span>: <span className="text-primary">true</span>{"\n"}
-                  <span className="text-terminal-cyan">interests</span>:{"\n"}
+                  <span className="text-terminal-cyan">focus</span>: <span className="text-foreground">"Cloud & Platform Engineering"</span>{"\n"}
+                  <span className="text-terminal-cyan">learning</span>: <span className="text-primary">["Kubernetes", "Terraform", "AWS"]</span>{"\n"}
+                  <span className="text-terminal-cyan">goals</span>:{"\n"}
                   {"  "}<span className="text-muted-foreground">-</span> <span className="text-foreground">"Infrastructure as Code"</span>{"\n"}
-                  {"  "}<span className="text-muted-foreground">-</span> <span className="text-foreground">"Cloud Native"</span>{"\n"}
-                  {"  "}<span className="text-muted-foreground">-</span> <span className="text-foreground">"Open Source"</span>
+                  {"  "}<span className="text-muted-foreground">-</span> <span className="text-foreground">"Zero Downtime Deployment"</span>{"\n"}
+                  {"  "}<span className="text-muted-foreground">-</span> <span className="text-foreground">"Cloud Native Solutions"</span>
                 </code>
               </pre>
             </div>
@@ -93,7 +92,7 @@ const About = () => {
             {expertise.map((item, index) => (
               <div
                 key={item.title}
-                className="group p-6 rounded-lg border border-border bg-card hover-lift"
+                className="group p-6 rounded-lg border border-border bg-card hover-lift transition-all duration-300"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">

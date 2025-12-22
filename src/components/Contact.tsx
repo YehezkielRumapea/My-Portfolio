@@ -18,9 +18,9 @@ const Contact = () => {
           </h2>
           
           <p className="text-lg text-muted-foreground mb-8">
-            I'm currently open to new opportunities and interesting DevOps challenges. 
+            I'm currently looking for new opportunities and interesting DevOps challenges. 
             Whether you have a question, a project idea, or just want to say hi, 
-            feel free to reach out!
+            my inbox is always open!
           </p>
           
           {/* Contact info cards */}
@@ -28,18 +28,19 @@ const Contact = () => {
             <div className="p-4 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
               <Mail className="w-5 h-5 text-primary mx-auto mb-2" />
               <p className="text-sm text-muted-foreground">Email</p>
-              <p className="font-mono text-sm">hello@yehezkiel.dev</p>
+              {/* Email sudah diperbarui */}
+              <p className="font-mono text-[13px]">rumapeayehezkiel@gmail.com</p>
             </div>
             <div className="p-4 rounded-lg border border-border bg-card/50 backdrop-blur-sm">
               <Calendar className="w-5 h-5 text-primary mx-auto mb-2" />
               <p className="text-sm text-muted-foreground">Availability</p>
-              <p className="font-mono text-sm text-primary">Open to work</p>
+              <p className="font-mono text-sm text-primary">Open for Intern/Junior Role</p>
             </div>
           </div>
           
           {/* CTA Button */}
           <Button variant="default" size="lg" className="glow" asChild>
-            <a href="mailto:alex@example.com">
+            <a href="mailto:rumapeayehezkiel@gmail.com">
               <Mail className="w-4 h-4 mr-2" />
               Send Message
             </a>

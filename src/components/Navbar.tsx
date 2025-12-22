@@ -17,6 +17,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -32,12 +33,17 @@ const Navbar = () => {
       <nav className="container px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 font-mono font-bold text-lg">
+          <a
+            href="#"
+            className="flex items-center gap-2 font-mono font-bold text-lg"
+          >
             <Terminal className="w-5 h-5 text-primary" />
-            <span>yehezkiel<span className="text-primary">.dev</span></span>
+            <span>
+              yehezkiel<span className="text-primary">.dev</span>
+            </span>
           </a>
 
-          {/* Desktop navigation */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link, index) => (
               <a
@@ -45,26 +51,37 @@ const Navbar = () => {
                 href={link.href}
                 className="font-mono text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                <span className="text-primary">0{index + 1}.</span> {link.name}
+                <span className="text-primary">0{index + 1}.</span>{" "}
+                {link.name}
               </a>
             ))}
+
             <Button variant="outline" size="sm" asChild>
-              <a href="/resume.pdf" target="_blank">
+              <a
+                href="./YehezkielResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Resume
               </a>
             </Button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle navigation menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
-        {/* Mobile navigation */}
+        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-b border-border">
             <div className="flex flex-col p-6 gap-4">
@@ -75,11 +92,17 @@ const Navbar = () => {
                   className="font-mono text-lg text-muted-foreground hover:text-primary transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <span className="text-primary">0{index + 1}.</span> {link.name}
+                  <span className="text-primary">0{index + 1}.</span>{" "}
+                  {link.name}
                 </a>
               ))}
+
               <Button variant="outline" className="mt-4" asChild>
-                <a href="/resume.pdf" target="_blank">
+                <a
+                  href="./YehezkielResume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Resume
                 </a>
               </Button>
