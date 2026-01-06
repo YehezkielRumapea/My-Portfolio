@@ -3,21 +3,26 @@ import { Terminal, Github, Linkedin, Mail } from "lucide-react";
 import profilePhoto from "@/assets/Profile.jpeg";
 
 const Hero = () => {
+  // Fungsi scroll ke Projects
   const scrollToProjects = () => {
     const el = document.getElementById("projects");
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-    }
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Fungsi scroll ke Contact
+  const scrollToContact = () => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background grid pattern */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      
+
       {/* Glow effect */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.15)_0%,transparent_70%)]" />
-      
+
       <div className="container relative z-10 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-12">
@@ -30,7 +35,7 @@ const Hero = () => {
                   <span className="font-mono text-sm text-primary">~/devops-engineer</span>
                 </div>
               </div>
-              
+
               {/* Main heading */}
               <div className="fade-in-up" style={{ animationDelay: "0.1s" }}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
@@ -39,14 +44,14 @@ const Hero = () => {
                   <span className="terminal-cursor text-primary ml-1">_</span>
                 </h1>
               </div>
-              
+
               {/* Subtitle */}
               <div className="fade-in-up" style={{ animationDelay: "0.2s" }}>
                 <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-mono">
                   <span className="text-primary">$</span> DevOps Engineer & Cloud Architect
                 </p>
               </div>
-              
+
               {/* Description */}
               <div className="fade-in-up" style={{ animationDelay: "0.3s" }}>
                 <p className="text-lg text-muted-foreground max-w-xl mb-8">
@@ -55,17 +60,17 @@ const Hero = () => {
                   cloud-native technologies.
                 </p>
               </div>
-              
+
               {/* CTA Buttons */}
               <div className="fade-in-up flex flex-wrap justify-center lg:justify-start gap-4 mb-8" style={{ animationDelay: "0.4s" }}>
                 <Button variant="default" size="lg" onClick={scrollToProjects}>
                   View Projects
                 </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <a href="#contact">Get In Touch</a>
+                <Button variant="outline" size="lg" onClick={scrollToContact}>
+                  Get In Touch
                 </Button>
               </div>
-              
+
               {/* Social links */}
               <div className="fade-in-up flex items-center justify-center lg:justify-start gap-4" style={{ animationDelay: "0.5s" }}>
                 <a 
@@ -107,7 +112,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
         <div className="w-6 h-10 rounded-full border-2 border-primary/50 flex justify-center pt-2">
