@@ -3,6 +3,13 @@ import { Terminal, Github, Linkedin, Mail } from "lucide-react";
 import profilePhoto from "@/assets/Profile.jpeg";
 
 const Hero = () => {
+  const scrollToProjects = () => {
+    const el = document.getElementById("projects");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background grid pattern */}
@@ -51,8 +58,8 @@ const Hero = () => {
               
               {/* CTA Buttons */}
               <div className="fade-in-up flex flex-wrap justify-center lg:justify-start gap-4 mb-8" style={{ animationDelay: "0.4s" }}>
-                <Button variant="default" size="lg" asChild>
-                  <a href="#projects">View Projects</a>
+                <Button variant="default" size="lg" onClick={scrollToProjects}>
+                  View Projects
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <a href="#contact">Get In Touch</a>
