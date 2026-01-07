@@ -66,7 +66,7 @@ const Navbar = () => {
 
             <Button variant="outline" size="sm" asChild>
               <a
-                href="./YehezkielResume.pdf"
+                href="./YehezkielRumapea.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
